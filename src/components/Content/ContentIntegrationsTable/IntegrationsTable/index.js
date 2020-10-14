@@ -4,41 +4,42 @@ import { Table } from 'antd';
 const columns = [
   {
     title: <strong>Origem</strong>,
-    dataIndex: 'name',
+    dataIndex: 'origin',
   },
   {
     title: <strong>URL Fluxo Implantado</strong>,
-    dataIndex: 'age',
+    dataIndex: 'experimentURL',
   },
   {
     title: <strong>Destino</strong>,
-    dataIndex: 'address',
+    dataIndex: 'destination',
   },
+  {
+    title: <strong>Status</strong>,
+    dataIndex: 'status',
+  }
 ];
 const data = [
   {
     key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
+    origin: 'Prometheus',
+    experimentURL: "http://awsplatiagro04/seldon/deployments/59a44281-3055-4907-b890-7df7c1a328d4/api/v1.0/predictions",
+    destination: 'Athenas',
+    status: 'Running',
   },
   {
     key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
+    origin: 'Selene',
+    experimentURL: "http://awsplatiagro02/seldon/deployments/8417e9d0-2ac9-41cb-8e1d-a5a89ef68212/api/v1.0/predictions",
+    destination: 'Eros',
+    status: 'Stopped',
   },
   {
     key: '4',
-    name: 'Disabled User',
-    age: 99,
-    address: 'Sidney No. 1 Lake Park',
+    origin: 'Herácles',
+    experimentURL: "http://awsplatiagro06/seldon/deployments/dc381760-1a69-439e-8e76-3f45d9562bac/api/v1.0/predictions",
+    destination: 'Belerofonte',
+    status: 'Failed',
   },
 ];
 

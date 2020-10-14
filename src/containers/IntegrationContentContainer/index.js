@@ -8,7 +8,8 @@ import IntegrationButton from '../../components/Content/IntegrationButton';
 const IntegrationContent = () => (
   <>
     <ContentHeaderContainer title='Integrações' backIcon={false} />
-    <div className='contentPage'>
+    <div className='contentPage'
+         style={{margin: "20px 20px 0px", padding: "10px"}}>
       <IntegrationButton handleClick={() => alert('TODO')} />
       <IntegrationsTableContainer />
     </div>

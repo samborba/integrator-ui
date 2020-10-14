@@ -10,6 +10,7 @@ const IntegrationButton = ({ handleClick }) => (
     icon={<PlusOutlined />}
     className='newIntegrationButton'
     type='primary'
+    style={{marginBottom: "20px"}}
   >
     Nova Integração
   </Button>
