@@ -1,12 +1,22 @@
-// CORE LIBS
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 
-// REDUCER
-import reducer from './reducer';
+import integrationReducer from './integration/reducer';
+import integrationsReducer from './integrations/reducer';
 
-// STORE
-const store = createStore(reducer, applyMiddleware(thunk));
+const composeEnhancers =
+  (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+      trace: true,
+      traceLimit: 25,
+    })) ||
+  compose;
 
-// EXPORT
+const reducers = combineReducers({
+    integrationReducer,
+    integrationsReducer
+});
+
+const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
+
 export default store;

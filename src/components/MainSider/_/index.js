@@ -7,7 +7,7 @@ import MainMenuContainer from '../../../containers/MainMenuContainer';
 
 import './style.less';
 
-import dojotCollapsed from '../../../assets/dojot-collapsed.png';
+import integratorCollapsed from '../../../assets/integrator-collapsed.png';
 import long from '../../../assets/long.png';
 
 const { Sider } = Layout;
@@ -25,9 +25,9 @@ const MainSider = () => {
       <Logo
         collapse={collapsed}
         logoSrc={long}
-        collapsedSrc={dojotCollapsed}
-        className='dojotLogo'
-        altText='Dojot logo'
+        collapsedSrc={integratorCollapsed}
+        className='integratorLogo'
+        altText='Integrator logo'
       />
       <MainMenuContainer className='mainMenu' />
     </Sider>
