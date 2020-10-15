@@ -1,9 +1,6 @@
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 
-import integrationReducer from './integration/reducer';
-import integrationsReducer from './integrations/reducer';
-
 const composeEnhancers =
   (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
@@ -12,10 +9,7 @@ const composeEnhancers =
     })) ||
   compose;
 
-const reducers = combineReducers({
-    integrationReducer,
-    integrationsReducer
-});
+const reducers = combineReducers({});
 
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
 
